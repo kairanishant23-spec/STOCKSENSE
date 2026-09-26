@@ -56,6 +56,40 @@ export const LoginPage: React.FC = () => {
           <p className="text-blue-200/70 mt-2">Sign in to your account</p>
         </div>
 
+        {/* Demo Credentials Box */}
+        <div className="mb-6 p-4 bg-blue-500/15 border border-blue-400/30 rounded-xl">
+          <div className="flex items-center justify-between mb-2">
+            <span className="text-xs font-semibold text-blue-300 uppercase tracking-wider flex items-center gap-1.5">
+              <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+              Demo Credentials
+            </span>
+            <button
+              type="button"
+              onClick={() => {
+                setLoginId('admin123');
+                setPassword('Test@123');
+                setError('');
+              }}
+              className="text-xs font-medium text-blue-300 hover:text-white bg-blue-600/40 hover:bg-blue-600/70 border border-blue-400/40 px-2.5 py-1 rounded-lg transition-all"
+            >
+              Auto-fill Demo
+            </button>
+          </div>
+          <div className="grid grid-cols-2 gap-2 text-xs">
+            <div className="bg-black/30 p-2 rounded-lg border border-white/5">
+              <span className="text-blue-200/60 block text-[11px]">Login ID:</span>
+              <span className="font-mono text-white font-medium select-all">admin123</span>
+            </div>
+            <div className="bg-black/30 p-2 rounded-lg border border-white/5">
+              <span className="text-blue-200/60 block text-[11px]">Password:</span>
+              <span className="font-mono text-white font-medium select-all">Test@123</span>
+            </div>
+          </div>
+          <p className="mt-2 text-[11px] text-blue-200/60">
+            Forgot Password demo OTP: <span className="font-mono text-blue-300 font-semibold select-all">123456</span>
+          </p>
+        </div>
+
         {error && (
           <div className="mb-6 p-3 bg-red-500/20 border border-red-500/50 rounded-lg text-red-200 text-sm text-center">
             {error}

@@ -162,9 +162,18 @@ export const ForgotPasswordPage: React.FC = () => {
                 className="space-y-5"
               >
                 <div>
-                  <label className="block text-sm font-medium text-blue-200/90 mb-1.5" htmlFor="otp">
-                    Enter OTP
-                  </label>
+                  <div className="flex justify-between items-center mb-1.5">
+                    <label className="block text-sm font-medium text-blue-200/90" htmlFor="otp">
+                      Enter OTP
+                    </label>
+                    <button
+                      type="button"
+                      onClick={() => setOtp('123456')}
+                      className="text-xs text-blue-300 hover:text-white bg-blue-500/20 hover:bg-blue-500/40 px-2 py-0.5 rounded border border-blue-400/30 transition-all font-mono"
+                    >
+                      Fill Demo OTP (123456)
+                    </button>
+                  </div>
                   <input
                     id="otp"
                     type="text"
