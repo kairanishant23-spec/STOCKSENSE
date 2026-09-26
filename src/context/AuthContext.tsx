@@ -20,12 +20,13 @@ export const AuthProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
   const login = async (loginId: string, password: string) => {
     // Mock login logic
     if (password === 'Test@123') {
+      const displayName = loginId.toLowerCase() === 'admin123' ? 'Ram Kumar' : loginId;
       setCurrentUser({
         id: '1',
         loginId,
         email: `${loginId}@example.com`,
-        name: loginId,
-        role: 'Admin'
+        name: displayName,
+        role: 'Inventory Manager'
       });
       return true;
     }
